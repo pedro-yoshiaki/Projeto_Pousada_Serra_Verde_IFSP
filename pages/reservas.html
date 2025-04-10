@@ -29,7 +29,126 @@
                 <li>Efetue a transferência do valor da reserva</li>
                 <li>Envie o comprovante de transferêcnia para o e-mail <a href="atendimento@pousadaserraverde.tur.br">atendimento@pousadaserraverde.tur.br</a></li>
             </ol>
+            <p><strong>Faça sua reserva agora na Pousada Serra Verde</strong></p>
         </article>
+        <form onsubmit="mostrarMensagem(); return false;">
+            <fieldset>
+                <legend><strong>Solicitação de Reserva</strong></legend>
+    
+                <div class="grupo">
+                    <br>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+    
+                <div class="linha">
+                    <div>
+                        <br>
+                        <label for="idade">Idade:</label>
+                        <input type="range" id="idade" name="idade" min="0" max="120" value="18" oninput="idadeOutput.value = idade.value">
+                        <output id="idadeOutput">18</output> ano(s)
+                    </div>
+    
+                    <div>
+                        <br>
+                        <label for="celular">Celular:</label>
+                        <input type="text" id="celular" name="celular" placeholder="99 99999-9999" required>
+                    </div>
+                </div>
+    
+                <div class="grupo">
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="linha">
+                    <div>
+                        <br>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+                    <div>
+                        <br>
+                        <label for="uf">UF:</label>
+                        <select id="uf" name="uf">
+                            <option value="SP">SP</option>
+                            <option value="RJ">RJ</option>
+                            <option value="MG">MG</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="grupo">
+                    <br>
+                    <label>Chalé:</label>
+                    <label><input type="radio" name="chale" value="Econômico" checked> Econômico</label>
+                    <label><input type="radio" name="chale" value="Standard"> Standard</label>
+                    <label><input type="radio" name="chale" value="Luxo"> Luxo</label>
+                    <label><input type="radio" name="chale" value="Família"> Família</label>
+                </div>
+    
+                <div class="linha">
+                    <div>
+                        <br>
+                        <label for="chegada">Chegada:</label>
+                        <input type="date" id="chegada" name="chegada" required>
+                    </div>
+                    <div>
+                        <br>
+                        <label for="partida">Partida:</label>
+                        <input type="date" id="partida" name="partida" required>
+                    </div>
+                </div>
+    
+                <div class="linha">
+                    <div>
+                        <br>
+                        <label for="adultos">Adultos:</label>
+                        <input type="number" id="adultos" name="adultos" min="1" value="1" required>
+                    </div>
+                    <div>
+                        <br>
+                        <label for="criancas">Crianças até 5 anos:</label>
+                        <input type="number" id="criancas" name="criancas" min="0" value="0">
+                    </div>
+                </div>
+    
+                <div class="grupo">
+                    <br>
+                    <label><input type="checkbox" name="estacionamento"> Quero reservar uma vaga no estacionamento.</label>
+                </div>
+    
+                <div class="grupo">
+                    <br>
+                    <label for="pagamento">Forma de Pagamento:</label>
+                    <select id="pagamento" name="pagamento">
+                        <option>Transferência (TED/DOC)</option>
+                        <option>Pix</option>
+                        <option>Depósito</option>
+                        <option>Cartão de Crédito</option>
+                        <option>Mastercard</option>
+                        <option>Visa</option>
+                        <option>Elo</option>
+                    </select>
+                </div>
+    
+                <div class="grupo">
+                    <br>
+                    <label for="mensagem">Pedido Especial:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Se desejar, faça um pedido especial..."></textarea>
+                <br>
+                </div>
+    
+                <button type="submit">Solicitar Reserva</button>
+            </fieldset>
+        </form>
+    
+        <script>
+            function mostrarMensagem() {
+                alert("Obrigado! Em breve, entraremos em contato para confirmação de sua reserva.");
+            }
+        </script>
     </section>
 </body>
 </html>
